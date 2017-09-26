@@ -63,4 +63,4 @@ VOLUME [ "/home/developer" ]
 USER developer
 ENV HOME /home/developer
 WORKDIR /home/developer
-# ENTRYPOINT [ "/opt/intellij/bin/idea.sh" ]
+ENTRYPOINT [ "/bin/bash" ]
