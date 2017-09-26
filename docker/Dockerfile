@@ -22,7 +22,15 @@ RUN sed 's/main$/main universe/' -i /etc/apt/sources.list && \
 		git \
 		gnome-keyring \
 		unzip \
-		wget && \
+		wget \
+# Dipendenze di Cycligent
+		gconf2 \
+		gconf-service \
+		libnotify4 \
+		libnss3 \
+		python \
+		gvfs-bin \
+		xdg-utils && \
     echo 'Cleaning up' && \
     apt-get clean -qq -y && \
     apt-get autoclean -qq -y && \
@@ -45,7 +53,7 @@ RUN echo 'Creating user: developer' && \
 RUN echo 'Downloading Cycligent ${CYCLIGENT_VER}' && \
     wget https://s3-us-west-2.amazonaws.com/cycligent-downloads/CycligentGitTool/installers/linux/x64/CycligentGitTool-${CYCLIGENT_VER}-linux-x64.deb -O /tmp/cycligent-${CYCLIGENT_VER}.deb -q && \
     echo 'Installing Cyclignet ${CYCLIGENT_VER}' && \
-	sudo dpkg -i /tmp/cycligent-${CYCLIGENT_VER}.deb \
+	sudo dpkg -i /tmp/cycligent-${CYCLIGENT_VER}.deb && \
     rm /tmp/cycligent-${CYCLIGENT_VER}.deb
 
 # Creazione dei mounting point
