@@ -30,7 +30,9 @@ RUN sed 's/main$/main universe/' -i /etc/apt/sources.list && \
 		libnss3 \
 		python \
 		gvfs-bin \
-		xdg-utils && \
+		xdg-utils
+		libxss1 
+		libcurl3 && \
     echo 'Cleaning up' && \
     apt-get clean -qq -y && \
     apt-get autoclean -qq -y && \
