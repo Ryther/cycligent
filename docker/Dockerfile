@@ -65,4 +65,4 @@ VOLUME [ "/home/developer" ]
 USER developer
 ENV HOME /home/developer
 WORKDIR /home/developer
-ENTRYPOINT [ "/bin/bash" ]
+ENTRYPOINT [ "/usr/share/CycligentGitTool/CycligentGitTool" ]
