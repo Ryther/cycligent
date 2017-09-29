@@ -1,0 +1,6 @@
+﻿;!@Install@!UTF-8!
+Title="Cycligent Git Tool Docker Runner"
+InstallPath="%TEMP%\\cycligentgittool\\"
+GUIMode="2"
+RunProgram="starter.bat ryther cycligent 0.5.2 cycligent_exec"
+;!@InstallEnd@!
