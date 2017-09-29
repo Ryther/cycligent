@@ -1,0 +1,5 @@
+# /installer ignore built, temporary and log files
+/installer/**/output/
+**.log
+**.exe
+gi_test**
